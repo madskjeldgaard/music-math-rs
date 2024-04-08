@@ -1,0 +1,52 @@
+[package]
+name = "music-math"
+version = "0.1.0"
+authors = ["Mads Kjeldgaard <mail@madskjeldgaard.dk>"]
+edition = "2021"
+rust-version = "1.56.0"
+description = ""
+# documentation = ""
+# homepage = ""
+repository = ""
+license = "MIT"
+keywords = ["music-math"]
+# categories = []
+
+publish = false # no accidents while in dev
+
+[features]
+default = []
+full = []
+
+[dependencies]
+fastrand = "2.0.2"
+num-traits = "0.2.18"
+rand = "0.8.5"
+
+[dev-dependencies]
+criterion = "0.4"
+pretty_assertions = "1"
+approx = "0.5.1"
+
+[package.metadata.cargo-udeps.ignore]
+development = ["criterion", "pretty_assertions"]
+
+[package.metadata.playground]
+features = ["full"]
+
+[profile.release]
+lto = true
+panic = "abort"
+codegen-units = 1
+incremental = false
+
+[profile.bench]
+lto = true
+panic = "abort"
+codegen-units = 1
+incremental = false
+
+[[bench]]
+name = "benches"
+harness = false
+# required-features = ["full"]
