@@ -1,5 +1,5 @@
 # music-math
-[![CI](https://github.com/madskjeldgaard/music-math/workflows/CI/badge.svg)](https://github.com/madskjeldgaard/music-math/actions?query=workflow%3ACI)
+[![CI](https://github.com/madskjeldgaard/music-math-rs/workflows/CI/badge.svg)](https://github.com/madskjeldgaard/music-math-rs/actions?query=workflow%3ACI)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/madskjeldgaard/music-math/blob/main/LICENSE-MIT)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
