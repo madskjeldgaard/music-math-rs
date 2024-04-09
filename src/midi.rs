@@ -12,7 +12,7 @@ pub const NOTE_NAMES: [&str; 12] = [
 /// use music_math::midi;
 /// let note = 69;
 /// let note_name = midi::MIDI_NOTE_NAMES.get(note as usize).unwrap();
-/// assert_eq!(note_name, "A4");
+/// assert_eq!(*note_name, "A4");
 /// ```
 pub const MIDI_NOTE_NAMES: [&str; 128] = [
     "C-1", "C#-1", "D-1", "D#-1", "E-1", "F-1", "F#-1", "G-1", "G#-1", "A-1", "A#-1", "B-1", "C0",
