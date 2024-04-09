@@ -32,6 +32,10 @@ See the documentation for more information.
 # Development
 
 Only requires `just` to bootstrap all tools and configuration.
+
+By installing this, you will set up a pre-commit hook that will run all tests and checks before committing work, it will auto-format code and generally not allow you to commit code that isn't documented or safe, among other things.
+
+
 ```bash
 cargo install just
 just init # setup repo, install hooks and all required tools
