@@ -7,7 +7,9 @@ This crate contains common functions and helpers for working with music / audio 
 
 Most of these are inspired by similar functions found in different computer music languages / environments like SuperCollider, PureData, MaxMSP, etc.
 
-It features the following modules:
+The goal is to provide safe and efficient implementations of these functions for use in Rust projects.
+
+It features the following modules and functions:
 - `midi`: Functions for converting between MIDI note numbers and frequencies, transposing, etc.
     - `get_midi_note_name`: Get the name of a MIDI note number.
     - `get_midinote_from_name`: Get the MIDI note number of a note name.
