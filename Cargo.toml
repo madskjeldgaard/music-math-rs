@@ -4,13 +4,13 @@ version = "0.1.0"
 authors = ["Mads Kjeldgaard <mail@madskjeldgaard.dk>"]
 edition = "2021"
 rust-version = "1.56.0"
-description = ""
+description = "common functions and helpers for working with music / audio."
 # documentation = ""
 # homepage = ""
-repository = ""
+repository = "https://github.com/madskjeldgaard/music-math-rs"
 license = "MIT"
 keywords = ["music-math"]
-# categories = []
+categories = ["music", "math", "midi", "audio"]
 
 publish = false # no accidents while in dev
 
@@ -19,12 +19,10 @@ default = []
 full = []
 
 [dependencies]
-fastrand = "2.0.2"
 num-traits = "0.2.18"
-rand = "0.8.5"
 
 [dev-dependencies]
-criterion = "0.4"
+criterion = "0.5.1"
 pretty_assertions = "1"
 approx = "0.5.1"
 
