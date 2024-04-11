@@ -10,9 +10,7 @@ description = "common functions and helpers for working with music / audio."
 repository = "https://github.com/madskjeldgaard/music-math-rs"
 license = "MIT"
 keywords = ["music-math"]
-categories = ["music", "math", "midi", "audio"]
-
-publish = false # no accidents while in dev
+categories = ["music", "math", "midi", "audio", "dsp"]
 
 [features]
 default = []
@@ -40,7 +38,6 @@ incremental = false
 
 [profile.bench]
 lto = true
-panic = "abort"
 codegen-units = 1
 incremental = false
 
