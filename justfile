@@ -27,7 +27,7 @@ run *FLAGS:
 
 # Generate documentation. Add '-- open' to open the docs in a web page.
 doc *FLAGS:
-    cargo doc --no-deps --all-features  --document-private-items --workspace --examples 
+    cargo doc --no-deps --all-features  --document-private-items --workspace --examples
 
 # Calculate coverage and open page with the results.
 coverage *FLAGS:
