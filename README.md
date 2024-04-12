@@ -26,6 +26,9 @@ It features the following modules and functions:
     - `clip`: Clip a value between a min and max value.
     - `fold`: Fold a value between a min and max value.
     - `wrap`: Wrap a value between a min and max value.
+- `interpolation`:
+    - `linear`: Linear interpolation between two values.
+    - `hermite`: Cubic hermite interpolation between two values.
 
 See the documentation for more information.
 

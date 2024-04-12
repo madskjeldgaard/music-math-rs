@@ -4,6 +4,24 @@ use music_math::{
 };
 
 fn criterion_benchmark(c: &mut Criterion) {
+    // hermite interpolation
+    c.bench_function("hermite", |b| {
+        b.iter(|| {
+            music_math::interpolation::hermite(
+                black_box(0.0),
+                black_box(1.0),
+                black_box(2.0),
+                black_box(3.0),
+                black_box(0.5),
+            )
+        })
+    });
+
+    // linear interpolation
+    c.bench_function("linear", |b| {
+        b.iter(|| music_math::interpolation::linear(black_box(0.0), black_box(1.0), black_box(0.5)))
+    });
+
     // clip
     c.bench_function("clip", |b| {
         b.iter(|| clip(black_box(20), black_box(0), black_box(10)))

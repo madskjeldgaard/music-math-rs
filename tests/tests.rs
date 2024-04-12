@@ -1,8 +1,35 @@
 use approx::assert_relative_eq;
 use music_math::binaryops::*;
+use music_math::interpolation::*;
 use music_math::midi;
 use music_math::scaling::*;
 use pretty_assertions::assert_eq;
+
+#[test]
+fn test_linear_interpolation() {
+    // Test with floating point numbers
+    assert_eq!(linear(0.0, 1.0, 0.5), 0.5);
+    assert_eq!(linear(0.0, 1.0, 0.0), 0.0);
+    assert_eq!(linear(0.0, 1.0, 1.0), 1.0);
+
+    // Test with negative numbers
+    assert_eq!(linear(-1.0, 1.0, 0.5), 0.0);
+    assert_eq!(linear(-1.0, 1.0, 0.0), -1.0);
+    assert_eq!(linear(-1.0, 1.0, 1.0), 1.0);
+}
+
+#[test]
+fn test_hermite_interpolation() {
+    // Test with floating point numbers
+    assert_eq!(hermite(0.0, 1.0, 2.0, 3.0, 0.5), 1.5);
+    assert_eq!(hermite(0.0, 1.0, 2.0, 3.0, 0.0), 1.0);
+    assert_eq!(hermite(0.0, 1.0, 2.0, 3.0, 1.0), 2.0);
+
+    // Test with negative numbers
+    assert_eq!(hermite(-1.0, 0.0, 1.0, 2.0, 0.5), 0.5);
+    assert_eq!(hermite(-1.0, 0.0, 1.0, 2.0, 0.0), 0.0);
+    assert_eq!(hermite(-1.0, 0.0, 1.0, 2.0, 1.0), 1.0);
+}
 
 #[test]
 fn note_names_array() {

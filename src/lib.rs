@@ -70,3 +70,6 @@ pub mod midi;
 
 /// Scaling operations module.
 pub mod scaling;
+
+/// Interpolation operations module.
+pub mod interpolation;
