@@ -1,13 +1,12 @@
-# music-math
+# music-math-rs
+
 [![CI](https://github.com/madskjeldgaard/music-math-rs/workflows/CI/badge.svg)](https://github.com/madskjeldgaard/music-math-rs/actions?query=workflow%3ACI)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/madskjeldgaard/music-math/blob/main/LICENSE-MIT)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
-This crate contains common functions and helpers for working with music / audio in Rust.
+This crate contains common functions and helpers for working with music / audio / DSP in Rust.
 
-Most of these are inspired by similar functions found in different computer music languages / environments like SuperCollider, PureData, MaxMSP, etc.
-
-The goal is to provide safe and efficient implementations of these functions for use in Rust projects.
+Almost all DSP, audio or music software uses variations of some of these functions, and the goal here is to provide a common set of well-tested, benchmarked and reliable set of functions that can be re-used across different projects.
 
 It features the following modules and functions:
 - `midi`: Functions for converting between MIDI note numbers and frequencies, transposing, etc.
@@ -38,7 +37,6 @@ Only requires `just` to bootstrap all tools and configuration.
 
 By installing this, you will set up a pre-commit hook that will run all tests and checks before committing work, it will auto-format code and generally not allow you to commit code that isn't documented or safe, among other things.
 
-
 ```bash
 cargo install just
 just init # setup repo, install hooks and all required tools
@@ -54,6 +52,11 @@ To test:
 just test
 ```
 
+To benchmark:
+```bash
+just benchmark
+```
+
 Before committing work:
 ```bash
 just pre-commit
@@ -64,15 +67,22 @@ To see all available commands:
 just list
 ```
 
+## Contributing to the code
+
+All contributions are welcome – these may be fixes to code, bug reports, improvements to documentation, etc.
+
+Clippy will enforce most code style rules, but you can also run `cargo fmt` to format your code.
+
+Note that if you add or change code, you should also add or change tests for that code and run the benchmarks (before and after the code change) to check for performance impacts.
+
 ## License
 
 This project is licensed under either of:
 * MIT license ([LICENSE-MIT] or http://opensource.org/licenses/MIT)
 
-## Contribution
+### Contribution
 
 Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as
 defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.
-
 
 [LICENSE-MIT]: ./LICENSE-MIT
