@@ -1,4 +1,4 @@
-# music-math-rs
+# 🎹 music-math-rs 🎹
 
 [![CI](https://github.com/madskjeldgaard/music-math-rs/workflows/CI/badge.svg)](https://github.com/madskjeldgaard/music-math-rs/actions?query=workflow%3ACI)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/madskjeldgaard/music-math/blob/main/LICENSE-MIT)
@@ -7,6 +7,8 @@
 This crate contains common functions and helpers for working with music / audio / DSP in Rust.
 
 Almost all DSP, audio or music software uses variations of some of these functions, and the goal here is to provide a common set of well-tested, benchmarked and reliable set of functions that can be re-used across different projects.
+
+Some of these functions are inspired by computer music environments like SuperCollider, Max/MSP, PureData, etc, but others are just very ubiquitous or useful bits of code to have at hand when working with audio, music or DSP.
 
 It features the following modules and functions:
 - `midi`: Functions for converting between MIDI note numbers and frequencies, transposing, etc.
