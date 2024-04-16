@@ -1,6 +1,6 @@
 [package]
 name = "music-math"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Mads Kjeldgaard <mail@madskjeldgaard.dk>"]
 edition = "2021"
 rust-version = "1.56.0"
